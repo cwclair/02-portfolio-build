@@ -14,7 +14,7 @@ p {
 }
 
 header {
-    background-color: gainsboro;
+    background-image: linear-gradient(to bottom right, gray, gainsboro);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -66,15 +66,22 @@ header li {
 }
 
 .portfolio-tier {
-    background-color: beige;
+    background-color: whitesmoke;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    padding: 10px 20px;
 }
 
-.portfolio-tier h2, .work-samples h2 {
+.portfolio-tier h2 {
     width: 25vw;
-    border-left: 5px dotted gray;
+    border-left: 10px dotted gray;
+    padding: 20px;
+}
+
+.work-samples h2 {
+    width: 25vw;
+    border-left: 10px dotted whitesmoke;
     padding: 20px;
 }
 
@@ -90,59 +97,61 @@ header li {
 
 .portfolio-tier li {
     display: inline-block;
-    padding: 1em;
-    font-size: 100%;
+    padding: 1.5em;
+    font-size: 110%;
     color: black;
 }
 
+.portfolio-tier li:hover {
+    font-size: 120%;
+    text-decoration: underline;
+}
+
 .work-samples {
-    background-color: burlywood;
+    background-image: linear-gradient(gray, #e3e3e3);
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 20px 0px;
+    padding: 20px 20px;
 }
 
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    width: 75vw;
-    justify-content: flex-end;
-    align-items: center;
+    flex-direction: row;
+    width: calc(75vw + 40px);
 }
 
 .card-primary {
     position: relative;
     flex: 1 0 75vw;
-    border: 10px solid black;
-    /* background-image: url("./images/wesley-tingey-dKCKiC0BQtU-unsplash.jpg"); */
+    border: 5px solid black;
+    margin-bottom: 1em;
 }
 
 .card-primary img {
     width: 75vw;
 }
 
+.card-smaller {
+    position: relative;
+    width: 36.5vw;
+    /* flex: 1 1 200px; */
+    border: 5px solid black;
+    margin-bottom: 1em;
+    margin-right: 1em;
+}
+
+.card-smaller img {
+    width: calc(36.5vw - 10px);
+}
+
 .work-caption {
     position: absolute;
     padding: 20px;
-    right: 2vw;
+    left: 2vw;
     bottom: 2vw;
     background-color: black;
     color: whitesmoke;
 }
 
-.card-02 {
-    flex: 1 0 35vw;
-}
-
-.card-03 {
-    flex: 1 0 35vw;
-}
-
-.card-04 {
-    flex: 1 0 35vw;
-}
-
-.card-05 {
-    flex: 1 0 35vw;
-}
