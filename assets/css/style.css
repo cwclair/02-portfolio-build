@@ -42,6 +42,10 @@ header li {
     color: black;
 }
 
+.banner {
+    width: 100vw;
+}
+
 .portfolio-tier {
     background-color: beige;
     display: flex;
@@ -88,10 +92,34 @@ header li {
 }
 
 .card-primary {
-    flex: 2 1 75vw;
+    flex: 2 1 70vw;
     padding-top: 20px;
+    border: 10px solid black;
 }
 
-.card {
+.card-primary img {
+    width: 70vw;
+}
+
+.card-primary h3 {
+}
+
+.card-02 {
     flex: 1 0 35vw;
+    background-image: url("assets/images/james-wheeler-HJhGcU_IbsQ-unsplash.jpg");
+}
+
+.card-03 {
+    flex: 1 0 35vw;
+    background-image: url("assets/images/james-wheeler-HJhGcU_IbsQ-unsplash.jpg");
+}
+
+.card-04 {
+    flex: 1 0 35vw;
+    background-image: url("assets/images/james-wheeler-HJhGcU_IbsQ-unsplash.jpg");
+}
+
+.card-05 {
+    flex: 1 0 35vw;
+    background-image: url("assets/images/james-wheeler-HJhGcU_IbsQ-unsplash.jpg");
 }
