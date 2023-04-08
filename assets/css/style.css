@@ -53,10 +53,9 @@ header li {
 
 .banner-text {
     position: absolute;
-    right: 0px;
+    right: 20px;
     bottom: 20px;
-    width: calc(.banner-text + 5px);
-    padding: 10px;
+    width: calc(banner-text + 5px);
 }
 
 .banner-text p {
@@ -75,7 +74,7 @@ header li {
 
 .portfolio-tier h2, .work-samples h2 {
     width: 25vw;
-    border-right: 5px dotted;
+    border-left: 5px dotted gray;
     padding: 20px;
 }
 
@@ -100,47 +99,50 @@ header li {
     background-color: burlywood;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
+    padding: 20px 0px;
 }
 
 .card-container {
     display: flex;
     flex-wrap: wrap;
+    width: 75vw;
     justify-content: flex-end;
     align-items: center;
-    padding-left: 20px;
 }
 
 .card-primary {
-    flex: 2 1 70vw;
-    padding-top: 20px;
+    position: relative;
+    flex: 1 0 75vw;
     border: 10px solid black;
-    background-image: url("./images/wesley-tingey-dKCKiC0BQtU-unsplash.jpg");
+    /* background-image: url("./images/wesley-tingey-dKCKiC0BQtU-unsplash.jpg"); */
 }
 
 .card-primary img {
-    width: 70vw;
+    width: 75vw;
 }
 
-/* .card-primary h3 {
-} */
+.work-caption {
+    position: absolute;
+    padding: 20px;
+    right: 2vw;
+    bottom: 2vw;
+    background-color: black;
+    color: whitesmoke;
+}
 
 .card-02 {
     flex: 1 0 35vw;
-    background-image: url("assets/images/james-wheeler-HJhGcU_IbsQ-unsplash.jpg");
 }
 
 .card-03 {
     flex: 1 0 35vw;
-    background-image: url("assets/images/james-wheeler-HJhGcU_IbsQ-unsplash.jpg");
 }
 
 .card-04 {
     flex: 1 0 35vw;
-    background-image: url("assets/images/james-wheeler-HJhGcU_IbsQ-unsplash.jpg");
 }
 
 .card-05 {
     flex: 1 0 35vw;
-    background-image: url("assets/images/james-wheeler-HJhGcU_IbsQ-unsplash.jpg");
 }
