@@ -49,9 +49,9 @@ header li {
     align-items: center;
 }
 
-.portfolio-tier h2 {
+.portfolio-tier h2, .work-samples h2 {
     width: 25vw;
-    border-right: 5px solid;
+    border-right: 5px dotted;
     padding: 20px;
 }
 
@@ -74,4 +74,24 @@ header li {
 
 .work-samples {
     background-color: burlywood;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.card-primary {
+    flex: 2 1 75vw;
+    padding-top: 20px;
+}
+
+.card {
+    flex: 1 0 35vw;
 }
