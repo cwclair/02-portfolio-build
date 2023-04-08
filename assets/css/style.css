@@ -1,7 +1,77 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    }
+
 body {
-    background-color: papayawhip;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.card {
-    background-color: crimson;
+p {
+    font-size: 16px;
+}
+
+header {
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+h1 {
+    font-size: 250%;
+}
+
+a:link, a:visited {
+    color: black;
+}
+
+header ul {
+    list-style-type: none;
+    padding: 20px;
+}
+
+header li {
+    display: inline-block;
+    padding: .5em;
+    font-size: 125%;
+    color: black;
+}
+
+.portfolio-tier {
+    background-color: beige;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.portfolio-tier h2 {
+    width: 25vw;
+    border-right: 5px solid;
+    padding: 20px;
+}
+
+.portfolio-tier p {
+    width: 75vw;
+    padding: 20px 20px;
+}
+
+.portfolio-tier ul {
+    list-style-type: none;
+    padding: 20px;
+}
+
+.portfolio-tier li {
+    display: inline-block;
+    padding: 1em;
+    font-size: 100%;
+    color: black;
+}
+
+.work-samples {
+    background-color: burlywood;
 }
