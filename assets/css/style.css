@@ -27,6 +27,11 @@ h1 {
     color: whitesmoke;
 }
 
+h1 img {
+    height: 100px;
+    padding-right: 50px;
+}
+
 a {
     color: black;
 }
@@ -57,6 +62,32 @@ header li {
     color: black;
 }
 
+/* I discovered this hover effect on CSS Tricks (https://css-tricks.com/css-link-hover-effect) and will cite it in the README file. */
+nav a {
+    box-shadow: inset 0 0 0 0 black;
+    color: black;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+nav a:hover {
+    box-shadow: inset 100px 0 0 0 black;
+    color: whitesmoke;
+  }
+
+nav ul {
+    list-style-type: none;
+    padding: 20px;
+}
+
+nav li {
+    display: inline-block;
+    padding: .5em;
+    font-size: 125%;
+    color: black;
+}
+
 .banner {
     position: relative;
     width: 100vw;
@@ -79,12 +110,23 @@ header li {
     font-weight: bold;    
 }
 
+.cycling-selfie {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+}
+
+.cycling-selfie img {
+    width: 13vw;
+    border-radius: 25%;
+}
+
 main {
     display: flex;
     flex-wrap: wrap;
 }
 
-.portfolio-tier {
+.portfolio-tier, .contact-tier {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -93,7 +135,7 @@ main {
     padding: 10px 20px;
 }
 
-.portfolio-tier h2 {
+.portfolio-tier h2, .contact-tier h2 {
     width: 25vw;
     border-left: 10px dotted gray;
     padding: 20px;
@@ -104,12 +146,12 @@ main {
     padding: 20px;
 }
 
-.portfolio-tier ul {
+.portfolio-tier ul, .contact-tier ul {
     list-style-type: none;
     padding: 20px;
 }
 
-.portfolio-tier li {
+.portfolio-tier li, .contact-tier li {
     display: inline-block;
     padding: 1em;
     font-size: 110%;
@@ -152,10 +194,6 @@ main {
     margin-bottom: 1em;
 }
 
-.card-primary img {
-    width: 100%;
-}
-
 .card-smaller {
     position: relative;
     flex: 0 0 34vw;
@@ -163,7 +201,7 @@ main {
     margin-bottom: 1em;
 }
 
-.card-smaller img {
+.card-primary img, .card-smaller img {
     width: 100%;
 }
 
@@ -192,6 +230,7 @@ main {
     font-size: 75%;
 }
 
+/* SETTINGS FOR SCREEN WITH MAX WIDTH OF 992px */
 @media screen and (max-width: 992px) {
     .aside {
         display: block;
@@ -204,56 +243,9 @@ main {
         padding: 20px 20px;
         justify-content: space-around;
     }
-    
-    /* .card-primary {
-        position: relative;
-        flex: 2 1 75vw;
-        border: 5px solid black;
-        margin-bottom: 1em;
-    }
-    
-    .card-primary img {
-        width: 100%;
-    }
-    
-    .card-smaller {
-        position: relative;
-        flex: 0 0 34vw;
-        border: 5px solid black;
-        margin-bottom: 1em;
-    }
-    
-    .card-smaller img {
-        width: 100%;
-    }
-    
-    .card-primary a, .card-smaller a {
-        color: whitesmoke;
-    }
-    
-    .card-primary:hover, .card-smaller:hover {
-        border: 6px dashed #ffcd00;
-    }
-    
-    .work-caption {
-        position: absolute;
-        left: 2vw;
-        bottom: 2vw;
-        padding: 5px;
-        background-color: black;
-        color: whitesmoke;
-    }
-    
-    .work-caption h3 {
-        font-size: 100%;
-    }
-    
-    .work-caption p {
-        font-size: 75%;
-    } */
-    
 }
 
+/* SETTINGS FOR SCREEN WITH MAX WIDTH OF 650px */
 @media screen and (max-width: 650px) {
     header {
         display: block;
