@@ -24,9 +24,10 @@ header {
 
 h1 {
     font-size: 250%;
+    color: whitesmoke;
 }
 
-a:link, a:visited {
+a {
     color: black;
 }
 
@@ -55,7 +56,6 @@ header li {
     position: absolute;
     right: 20px;
     bottom: 20px;
-    width: calc(banner-text + 5px);
 }
 
 .banner-text p {
@@ -65,11 +65,17 @@ header li {
     font-weight: bold;    
 }
 
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .portfolio-tier {
-    background-color: whitesmoke;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    width: 100vw;
+    background-color: whitesmoke;
     padding: 10px 20px;
 }
 
@@ -79,15 +85,10 @@ header li {
     padding: 20px;
 }
 
-.work-samples h2 {
-    width: 25vw;
-    border-left: 10px dotted whitesmoke;
-    padding: 20px;
-}
-
 .portfolio-tier p {
+    /* display: inline-block; */
     width: 75vw;
-    padding: 20px 20px;
+    padding: 20px;
 }
 
 .portfolio-tier ul {
@@ -97,61 +98,103 @@ header li {
 
 .portfolio-tier li {
     display: inline-block;
-    padding: 1.5em;
+    padding: 1em;
     font-size: 110%;
     color: black;
 }
 
 .portfolio-tier li:hover {
     font-size: 120%;
+    font-weight: bold;
     text-decoration: underline;
 }
 
-.work-samples {
+aside {
+    flex: 1;
     background-image: linear-gradient(gray, #e3e3e3);
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
     padding: 20px 20px;
+    color: whitesmoke;
 }
 
-.card-container {
+aside h2 {
+    border-left: 10px dotted whitesmoke;
+    padding: 20px;
+
+}
+
+.work-samples {
+    flex: 3;
+    background-image: linear-gradient(gray, #e3e3e3);
+    padding: 20px 20px;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    width: calc(75vw + 40px);
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .card-primary {
     position: relative;
-    flex: 1 0 75vw;
+    flex: 2 1 75vw;
     border: 5px solid black;
     margin-bottom: 1em;
 }
 
 .card-primary img {
-    width: 75vw;
+    width: 100%;
 }
 
 .card-smaller {
     position: relative;
-    width: 36.5vw;
-    /* flex: 1 1 200px; */
+    flex: 0 0 34vw;
     border: 5px solid black;
     margin-bottom: 1em;
-    margin-right: 1em;
 }
 
 .card-smaller img {
-    width: calc(36.5vw - 10px);
+    width: 100%;
+}
+
+.card-primary a, .card-smaller a {
+    color: whitesmoke;
+}
+
+.card-primary:hover, .card-smaller:hover {
+    border: 6px dashed #ffcd00;
 }
 
 .work-caption {
     position: absolute;
-    padding: 20px;
+    padding: 5px;
     left: 2vw;
     bottom: 2vw;
     background-color: black;
     color: whitesmoke;
 }
 
+.work-caption h3 {
+    font-size: 100%;
+}
+
+.work-caption p {
+    font-size: 75%;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        display: block;
+    }
+
+    .portfolio-tier {
+        display: block;
+        align-items: center;
+        padding: 10px 20px;
+    }
+    
+    .portfolio-tier h2 {
+        width: 100vw;
+        border-left: 10px dotted gray;
+        padding: 20px;
+    }
+    
+    
+}
