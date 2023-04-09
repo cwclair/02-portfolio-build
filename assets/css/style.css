@@ -24,6 +24,8 @@ header {
 
 h1 {
     font-size: 250%;
+    padding: 5px;
+    background-color: black;
     color: whitesmoke;
 }
 
@@ -151,7 +153,7 @@ main {
     padding: 20px;
 }
 
-.portfolio-tier li, .contact-tier li {
+.portfolio-tier li {
     display: inline-block;
     padding: 1em;
     font-size: 110%;
@@ -230,6 +232,17 @@ main {
     font-size: 75%;
 }
 
+.contact-tier li {
+    display: inline-block;
+    padding: 2em;
+    font-size: 110%;
+    color: black;
+}
+
+.contact-tier li img {
+    width: 8vw;
+}
+
 /* SETTINGS FOR SCREEN WITH MAX WIDTH OF 992px */
 @media screen and (max-width: 992px) {
     .aside {
@@ -258,6 +271,18 @@ main {
     }
     
     .portfolio-tier h2 {
+        width: 100vw;
+        border-left: 10px dotted gray;
+        padding: 20px;
+    }
+
+    .contact-tier {
+        display: block;
+        align-items: center;
+        padding: 10px 20px;
+    }
+    
+    .contact-tier h2 {
         width: 100vw;
         border-left: 10px dotted gray;
         padding: 20px;
