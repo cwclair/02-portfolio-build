@@ -164,6 +164,7 @@ main {
 
 .card-primary img, .card-smaller img {
     width: 100%;
+    margin-bottom: -5px;
 }
 
 .card-primary a, .card-smaller a {
