@@ -13,6 +13,7 @@ p {
     font-size: 16px;
 }
 
+/* Establishes the header stylings */
 header {
     background-image: linear-gradient(to bottom right, gray, gainsboro);
     display: flex;
@@ -27,11 +28,6 @@ h1 {
     padding: 5px;
     background-color: black;
     color: whitesmoke;
-}
-
-h1 img {
-    height: 100px;
-    padding-right: 50px;
 }
 
 a {
@@ -64,32 +60,7 @@ header li {
     color: black;
 }
 
-/* I discovered this hover effect on CSS Tricks (https://css-tricks.com/css-link-hover-effect) and will cite it in the README file. */
-nav a {
-    box-shadow: inset 0 0 0 0 black;
-    color: black;
-    margin: 0 -.25rem;
-    padding: 0 .25rem;
-    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-}
-
-nav a:hover {
-    box-shadow: inset 100px 0 0 0 black;
-    color: whitesmoke;
-  }
-
-nav ul {
-    list-style-type: none;
-    padding: 20px;
-}
-
-nav li {
-    display: inline-block;
-    padding: .5em;
-    font-size: 125%;
-    color: black;
-}
-
+/* Sets parameters for the banner image and positions the selfie photo and the Hawkeye affinity statement */ 
 .banner {
     position: relative;
     width: 100vw;
@@ -127,7 +98,7 @@ main {
     display: flex;
     flex-wrap: wrap;
 }
-
+/* Sets styles for the About Me and Contact Me rows */
 .portfolio-tier, .contact-tier {
     display: flex;
     justify-content: flex-start;
@@ -153,19 +124,7 @@ main {
     padding: 20px;
 }
 
-.portfolio-tier li {
-    display: inline-block;
-    padding: 1em;
-    font-size: 110%;
-    color: black;
-}
-
-.portfolio-tier li:hover {
-    font-size: 120%;
-    font-weight: bold;
-    text-decoration: underline;
-}
-
+/* Stylizes the left side of the Work section, which holds the title */
 .aside {
     flex: 1;
     background-image: linear-gradient(gray, #e3e3e3);
@@ -178,7 +137,7 @@ main {
     padding: 20px;
 
 }
-
+/* Establishes responsive behavior in the Work section */
 .work-samples {
     flex: 3;
     background-image: linear-gradient(gray, #e3e3e3);
@@ -188,7 +147,7 @@ main {
     justify-content: space-between;
     align-items: flex-start;
 }
-
+/* Sets the style for the primary photo and the secondary photos in the Work section */
 .card-primary {
     position: relative;
     flex: 2 1 75vw;
@@ -210,11 +169,11 @@ main {
 .card-primary a, .card-smaller a {
     color: whitesmoke;
 }
-
+/* provides a golden border on the Work photos upon hover */ 
 .card-primary:hover, .card-smaller:hover {
     border: 6px dashed #ffcd00;
 }
-
+/* The Work Caption class provides a box (overlaying the photo) with a title and descriptor for each of the photos in the "Work" section */
 .work-caption {
     position: absolute;
     left: 2vw;
@@ -231,23 +190,43 @@ main {
 .work-caption p {
     font-size: 75%;
 }
-
+/* Styles the Contact Me row */
 .contact-tier li {
     display: inline-block;
     padding: 2em;
     font-size: 110%;
     color: black;
 }
-
+/* sets width of the Contact Me icons */
 .contact-tier li img {
     width: 8vw;
 }
 
+/* Creates a descriptive block under the Contact Me icons upon hover, so as not to display my phone number or email on the page, and provides a clean look to the icon set */
+span[data-descr] {
+    position: relative;
+    cursor: pointer;
+  }
+
+span[data-descr]:hover::after {
+    content: attr(data-descr);
+    position: absolute;
+    left: 5px;
+    bottom: -50px;
+    min-width: 50px;
+    border: 1px gray solid;
+    background-color: gray;
+    padding: 12px;
+    color: whitesmoke;
+    font-size: 90%;
+    z-index: 1;
+  }
+
 /* SETTINGS FOR SCREEN WITH MAX WIDTH OF 992px */
 @media screen and (max-width: 992px) {
-    .aside {
+    /* .aside {
         display: block;
-    }
+    } */
 
     .work-samples {
         display: flex;
@@ -289,7 +268,8 @@ main {
     }
 
     .aside {
-        display: block;
+        /* display: block; */
+        width: 100vw;
     }
     
     .work-samples {
@@ -297,7 +277,7 @@ main {
     }
     
     .card-smaller {
-        flex: 0 0 40vw;
+        flex: 0 0 60vw;
     }
 
     .work-caption {
