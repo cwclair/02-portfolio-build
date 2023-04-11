@@ -214,7 +214,7 @@ span[data-descr]:hover::after {
     position: absolute;
     left: 5px;
     bottom: -50px;
-    min-width: 50px;
+    min-width: 40px;
     border: 1px gray solid;
     background-color: gray;
     padding: 12px;
